@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,900');
 
 *,body{
 	margin: 0;
@@ -10,25 +10,92 @@
 	text-rendering: optimizeLegibility !important;
 
 }
+*::after,*::before{
+	box-sizing: border-box;
+}
 ul {
 	list-style-type: none;
+}
+h1{
+	font-size: 36px;
+}
+h2{
+	font-size: 21px;
+}
+h3{
+	font-size: 19px;
+}
+h4{
+	font-size: 16px;
+}
+h5{
+	font-size: 13px;
+}
+h5{
+	font-size: 11px;
 }
 a{
 	text-decoration: none;
 	color: black;
 	font-weight: 400;
-	font-size: 14px;
+}
+p{
+	font-size: 18px;
+	line-height: 36px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #c0bbba;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #c0bbba;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #c0bbba;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #c0bbba;
+}
+.abu{
+	color: #c0bbba;
+}
+.title{
+	font-size: 100px;
 }
 .cont{
 	margin-left: 150px;
 	margin-right: 150px;
 }
+.myBtn{
+	border: none;
+	outline: none;
+	padding: 15px 30px;
+	color: white;
+	background: orange;
+	font-size: 16px;
+	border-radius: 8px;
+
+}
+.myBtn:hover{
+	cursor: pointer;
+}
 .header{
 	background-image: url('./assets/bg_head.jpg');
-	height: 100vh;
+	height:90vh;
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
+}
+.active{
+	color: orange;
+}
+.active::after{
+	display: block;
+	visibility: visible;
+	position: relative;
+	top: 30px;
+	content: '';
+	left: 2px;
+	border-bottom: 2px solid orange;
 }
 nav{
 	display: flex;
@@ -40,6 +107,15 @@ nav{
 	border: none;
 	border-radius: 2px;
 }
+nav .logo{
+	display: block;
+}
+nav .logo h1::after{
+	clear: both;
+	content: " .";
+	white-space: pre;
+	color: orange;
+}
 nav ul{
 	display: flex;
 	width: 100%;
@@ -49,21 +125,86 @@ nav ul li{
 	display: inline;
 }
 nav ul li a{
-	font-weight: 700;
-	color: #c4c4c4;
+	font-weight: 600;
+	color: #c0bbba;
 	display: block;
-	margin-left: 30px;
+	margin-left: 40px;
 	text-transform: uppercase;
 }
-nav ul li a::after{
-	display: block;
-	visibility: hidden;
-	position: relative;
-	top: 30px;
-	content: '';
-	left: 2px;
-	border-bottom: 2px solid orange;
+nav ul li a:hover{
+	color: orange;
 }
-nav ul li a:hover::after{
-	visibility: visible;
+.header .content_head{
+	margin-top: 125px;
+	color: white;
+}
+.header .content_head h1:nth-child(2){
+	padding: 20px 0 30px 0;
+}
+.header .pesan{
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	bottom: 10px;
+	webkit-box-shadow: 0px 20px 50px 0px rgba(196,196,196,0.89);
+	-moz-box-shadow: 0px 20px 50px 0px rgba(196,196,196,0.89);
+	box-shadow: 0px 20px 50px 0px rgba(196,196,196,0.89);
+	width: 85%;
+	border-radius: 5px;
+	background: white;
+	align-items: center;
+	padding: 45px;
+}
+.header .pesan div{
+	flex-grow: 1;
+}
+.header .pesan h4{
+	padding-bottom: 20px;
+}
+.header .pesan p{
+	color: #c0bbba;
+}
+input{
+	border: none;
+	outline: none;
+	padding-left:20px;
+	font-size: 16px;
+	color: #c0bbba;
+}
+
+.header .pesan i {
+  border: solid #c0bbba;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px;
+}
+.header .pesan .down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.header .pesan .search button{
+	margin: 0 auto;
+}
+.content{
+	margin-top: 150px;
+}
+.content .tours h1{
+	padding-bottom: 15px;
+}
+.content .tours{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.content .tours .tours_search{
+	padding-bottom: 20px;
+	border-bottom: 2px solid #c0bbba;
+}
+.content .tours .tours_search input{
+	padding-left: 0 !important;
+	font-size: 21px;
+}
+.content .tours .tours_search span{
+	padding-left: 50px;
 }
