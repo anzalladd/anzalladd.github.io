@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,900');
+
+*,body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important; 
+	text-rendering: optimizeLegibility !important;
+
+}
+ul {
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: black;
+	font-weight: 400;
+	font-size: 14px;
+}
+.cont{
+	margin-left: 150px;
+	margin-right: 150px;
+}
+.header{
+	background-image: url('./assets/bg_head.jpg');
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	background: white;
+	padding: 30px;
+	border: none;
+	border-radius: 2px;
+}
+nav ul{
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+nav ul li{
+	display: inline;
+}
+nav ul li a{
+	font-weight: 700;
+	color: #c4c4c4;
+	display: block;
+	margin-left: 30px;
+	text-transform: uppercase;
+}
+nav ul li a::after{
+	display: block;
+	visibility: hidden;
+	position: relative;
+	top: 30px;
+	content: '';
+	left: 2px;
+	border-bottom: 2px solid orange;
+}
+nav ul li a:hover::after{
+	visibility: visible;
+}
