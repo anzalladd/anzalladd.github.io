@@ -55,6 +55,13 @@ p{
 :-moz-placeholder { /* Firefox 18- */
   color: #c0bbba;
 }
+.aktif{
+	color: #000;
+	font-weight: 700;
+	font-size: 22px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid black;
+}
 .abu{
 	color: #c0bbba;
 }
@@ -65,10 +72,13 @@ p{
 	margin-left: 150px;
 	margin-right: 150px;
 }
+.margin-kiri{
+	margin-left: 150px;
+}
 .myBtn{
 	border: none;
 	outline: none;
-	padding: 15px 30px;
+	padding: 20px 45px;
 	color: white;
 	background: orange;
 	font-size: 16px;
@@ -187,7 +197,7 @@ input{
 	margin: 0 auto;
 }
 .content{
-	margin-top: 150px;
+	margin-top: 130px;
 }
 .content .tours h1{
 	padding-bottom: 15px;
@@ -207,4 +217,81 @@ input{
 }
 .content .tours .tours_search span{
 	padding-left: 50px;
+}
+.content > .cards {
+	display: flex;
+	flex-direction: row;
+	overflow-x: hidden;
+	margin-top: 60px;
+}
+.content > .cards > .card{
+	margin-right: 30px;
+}
+.content > .cards > .card > .bg_card > img{
+	border-radius: 5px;
+	width: 333px;
+}
+.content > .cards > .card > .bg_card > h3{
+	float: right;
+	width: 20%;
+	padding: 15px 0;
+	text-align: center;
+	background: white;
+	-webkit-box-shadow: 0px 0px 70px 0px rgba(196,196,196,1);
+	-moz-box-shadow: 0px 0px 70px 0px rgba(196,196,196,1);
+	box-shadow: 0px 0px 70px 0px rgba(196,196,196,1);
+	position: relative;
+	bottom: 40px;
+	right: 20px;
+	border-radius: 5px;
+}
+.content > .cards > .card > .bg_card > p::before{
+	content: '';
+	clear: both;
+}
+.content > .cards > .card > .detail{
+	margin-top: 20px;
+}
+.content > .cards > .card > .detail > *{
+	margin-bottom: 20px;
+}
+.content > .cards > .card > .detail > p::after{
+	content: '';
+	float: right;
+	width: 33%;
+	background-image: url('./assets/star.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 30px;
+}
+.content > .tips {
+	margin-top: 100px;
+}
+.content > .tips{
+	display: flex;
+	flex-direction: row;
+}
+.content > .tips > .text{
+	flex:40%;
+}
+.content > .tips > .text > ul li{
+	margin-top: 30px;
+	display: inline-block;
+	padding: 10px;
+
+}
+.content > .tips > .text > ul > li > a{
+	color: #666;
+}
+.content > .tips > .text > p{
+	color: #666;
+	margin-top: 40px;	
+}
+.content > .tips > .gambar{
+	flex: 60%;
+}
+.content > .tips > .gambar > img{
+	float: right;
+	width: 90%;
+	height: 95%;
 }
